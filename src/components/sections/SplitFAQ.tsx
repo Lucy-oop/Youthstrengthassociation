@@ -7,6 +7,7 @@ import { Plus } from "lucide-react";
 import { faqs } from "@/content/faq";
 import { site } from "@/content/site";
 import { ImageReveal, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { asset } from "@/lib/asset";
 
 /** Two-column split FAQ: accordion beside a sticky media anchor. */
 export function SplitFAQ({ image = "/photos/planning-table.jpg", alt = "Young people collaborating around a planning table" }) {
@@ -75,7 +76,7 @@ export function SplitFAQ({ image = "/photos/planning-table.jpg", alt = "Young pe
         <div className="lg:sticky lg:top-28 lg:self-start">
           <ImageReveal from="right" className="relative aspect-[4/5] overflow-hidden rounded-3xl sm:aspect-[5/4] lg:aspect-[4/5]">
           <figure className="relative size-full">
-            <Image src={image} alt={alt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+            <Image src={asset(image)} alt={alt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
             <figcaption className="absolute inset-x-4 bottom-4 rounded-2xl bg-white/92 p-5 backdrop-blur">
               <p className="font-display text-lg italic">“{site.motto}”</p>
               <p className="mt-1 text-sm text-muted">Youth Strength Association · since {site.founded}</p>

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { site } from "@/content/site";
+import { asset } from "@/lib/asset";
 
 export function Header() {
   const pathname = usePathname();
@@ -47,7 +48,7 @@ export function Header() {
       <div className="container-page flex h-18 items-center justify-between gap-4 py-3">
         <Link href="/" className="flex items-center gap-3" aria-label={`${site.name} home`}>
           <span className="grid size-11 place-items-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-black/5">
-            <Image src="/logo.png" alt="" width={44} height={44} className="size-11 object-contain" />
+            <Image src={asset("/logo.png")} alt="" width={44} height={44} className="size-11 object-contain" />
           </span>
           <span className="leading-tight">
             <span className="block font-display text-lg font-semibold">{site.short}</span>

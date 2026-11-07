@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { ImageReveal, Reveal } from "@/components/motion/Reveal";
+import { asset } from "@/lib/asset";
 
 export type SplitItem = {
   eyebrow?: string;
@@ -25,7 +26,7 @@ export function AlternatingSplit({ items }: { items: SplitItem[] }) {
               className={`relative aspect-[4/3] overflow-hidden rounded-3xl ${flip ? "lg:order-2" : ""}`}
             >
               <Image
-                src={item.image}
+                src={asset(item.image)}
                 alt={item.alt}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

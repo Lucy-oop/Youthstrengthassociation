@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { usePrefersReducedMotion } from "@/components/motion/usePrefersReducedMotion";
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { heroIntro, heroSlides } from "@/content/home";
+import { asset } from "@/lib/asset";
 
 const DURATION = 7000;
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -59,7 +60,7 @@ export function HeroSlider() {
           transition={{ duration: 1.2, ease: "easeInOut" }}
         >
           <Image
-            src={slide.image}
+            src={asset(slide.image)}
             alt={slide.alt}
             fill
             sizes="100vw"

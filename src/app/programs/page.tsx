@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/sections/PageHeader";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { programs } from "@/content/programs";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Our work",
@@ -33,7 +34,7 @@ export default function ProgramsPage() {
                 className="group relative isolate flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-3xl p-7 text-white sm:p-10"
               >
                 <Image
-                  src={p.cover}
+                  src={asset(p.cover)}
                   alt={p.coverAlt}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"

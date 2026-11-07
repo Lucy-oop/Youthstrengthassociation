@@ -3,6 +3,7 @@ import { Handshake, Quote } from "lucide-react";
 import { ImageReveal, Reveal } from "@/components/motion/Reveal";
 import { partners } from "@/content/impact";
 import { SectionHeading } from "./SectionHeading";
+import { asset } from "@/lib/asset";
 
 /** Asymmetrical, zig-zag mix of photo, quote, list and stat blocks. */
 export function AsymmetricGrid() {
@@ -19,7 +20,7 @@ export function AsymmetricGrid() {
           {/* Row 1 */}
           <ImageReveal from="left" className="relative min-h-80 overflow-hidden rounded-3xl lg:col-span-7 lg:row-span-2 lg:min-h-[34rem]">
             <Image
-              src="/photos/head-table-meeting.jpg"
+              src={asset("/photos/head-table-meeting.jpg")}
               alt="YSA facilitating a meeting between villagers and government officials"
               fill
               sizes="(min-width: 1024px) 58vw, 100vw"
@@ -67,7 +68,7 @@ export function AsymmetricGrid() {
 
           <ImageReveal delay={0.1} from="right" className="relative min-h-80 overflow-hidden rounded-3xl lg:col-span-8">
             <Image
-              src="/photos/health-donation-drive.jpg"
+              src={asset("/photos/health-donation-drive.jpg")}
               alt="Volunteers presenting hygiene kit supplies and an awareness poster"
               fill
               sizes="(min-width: 1024px) 66vw, 100vw"

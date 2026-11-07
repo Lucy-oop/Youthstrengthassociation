@@ -10,6 +10,7 @@ import { ArrowRight } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { showcaseImages } from "@/content/home";
 import { site } from "@/content/site";
+import { asset } from "@/lib/asset";
 
 /** Centered content hero with a 3-card visual grid (triptych). */
 export function CenteredShowcase() {
@@ -61,7 +62,7 @@ export function CenteredShowcase() {
                   }`}
                 >
                   <Image
-                    src={img.src}
+                    src={asset(img.src)}
                     alt={img.alt}
                     fill
                     sizes="(min-width: 640px) 33vw, 100vw"

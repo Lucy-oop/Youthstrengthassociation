@@ -3,6 +3,7 @@ import { Fraunces, Plus_Jakarta_Sans, Noto_Sans_Myanmar } from "next/font/google
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { site } from "@/content/site";
+import { asset } from "@/lib/asset";
 import "./globals.css";
 
 const heading = Fraunces({
@@ -30,11 +31,11 @@ export const metadata: Metadata = {
     template: `%s · ${site.short}`,
   },
   description: site.description,
-  icons: { icon: "/logo.png" },
+  icons: { icon: asset("/logo.png") },
   openGraph: {
     title: site.name,
     description: site.description,
-    images: ["/hero-children.png"],
+    images: [asset("/hero-children.png")],
   },
 };
 

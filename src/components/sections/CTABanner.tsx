@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import { ImageReveal, Reveal } from "@/components/motion/Reveal";
 import { site } from "@/content/site";
+import { asset } from "@/lib/asset";
 
 export function CTABanner() {
   return (
@@ -11,7 +12,7 @@ export function CTABanner() {
         <div className="relative isolate overflow-hidden rounded-[2rem] bg-sky-900 px-6 py-16 text-white sm:px-14 sm:py-20">
           <ImageReveal className="absolute inset-0 -z-10">
           <Image
-            src="/photos/schoolgirl-window.jpg"
+            src={asset("/photos/schoolgirl-window.jpg")}
             alt=""
             fill
             sizes="(min-width: 1280px) 1216px, 100vw"

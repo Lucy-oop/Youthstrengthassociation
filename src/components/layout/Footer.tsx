@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { site } from "@/content/site";
 import { programs } from "@/content/programs";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { asset } from "@/lib/asset";
 
 export function Footer() {
   return (
@@ -12,7 +13,7 @@ export function Footer() {
         <StaggerItem>
           <div className="flex items-center gap-3">
             <span className="grid size-14 place-items-center rounded-full bg-white">
-              <Image src="/logo.png" alt="" width={56} height={56} className="size-14 object-contain" />
+              <Image src={asset("/logo.png")} alt="" width={56} height={56} className="size-14 object-contain" />
             </span>
             <div>
               <p className="font-display text-xl font-semibold text-white">{site.name}</p>
